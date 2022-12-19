@@ -10,5 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.guava:guava:31.1-jre")
+    // https://mvnrepository.com/artifact/org.telegram/telegrambots
+    implementation("org.telegram:telegrambots:6.3.0")
+
 }

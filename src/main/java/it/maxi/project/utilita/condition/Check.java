@@ -2,13 +2,35 @@ package it.maxi.project.utilita.condition;
 
 import com.google.common.base.Preconditions;
 import com.google.common.util.concurrent.AtomicDouble;
+import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.Comparator;
 
 public class Check {
 
+    public static TelegramLongPollingBot getTelegram() {
+        return new TelegramLongPollingBot() {
+            @Override
+            public String getBotToken() {
+                return null;
+            }
+
+            @Override
+            public void onUpdateReceived(Update update) {
+
+            }
+
+            @Override
+            public String getBotUsername() {
+                return null;
+            }
+        };
+    }
+
     public static <T> T notNull(T t) {
-        return Preconditions.checkNotNull(t);
+        return notNull(t, null);
     }
 
     public static <T> T notNull(T t, String message) {
