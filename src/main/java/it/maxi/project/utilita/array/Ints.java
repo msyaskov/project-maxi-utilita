@@ -63,6 +63,13 @@ public final class Ints implements Iterable<Integer> {
         return new HashSet<>() {{ Ints.this.forEach(this::add); }};
     }
 
+    public Ints concat(Ints i1, Ints i2) {
+        Ints.Builder builder = Ints.builder();
+        i1.forEach(builder::add);
+        i2.forEach(builder::add);
+        return builder.build();
+    }
+
     public boolean contains(int key) {
         for (int i : this) {
             if (i == key) {

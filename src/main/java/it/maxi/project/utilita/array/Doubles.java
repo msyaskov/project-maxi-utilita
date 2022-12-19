@@ -62,6 +62,13 @@ public final class Doubles implements Iterable<Double> {
         return new HashSet<>() {{ Doubles.this.forEach(this::add); }};
     }
 
+    public Doubles concat(Doubles d1, Doubles d2) {
+        Doubles.Builder builder = Doubles.builder();
+        d1.forEach(builder::add);
+        d2.forEach(builder::add);
+        return builder.build();
+    }
+
     public boolean contains(double key) {
         for (double d: this) {
             if (d == key) {

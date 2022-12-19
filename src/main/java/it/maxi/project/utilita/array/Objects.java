@@ -64,6 +64,13 @@ public final class Objects implements Iterable<Object> {
         return new HashSet<>() {{ Objects.this.forEach(this::add); }};
     }
 
+    public Objects concat(Objects o1, Objects o2) {
+        Objects.Builder builder = Objects.builder();
+        o1.forEach(builder::add);
+        o2.forEach(builder::add);
+        return builder.build();
+    }
+
     public boolean contains(Object key) {
         for (Object o: this) {
             if (o.hashCode() == key.hashCode() && o.equals(key)) {

@@ -64,6 +64,13 @@ public class Longs implements Iterable<Long> {
         return new HashSet<>() {{ Longs.this.forEach(this::add); }};
     }
 
+    public Longs concat(Longs l1, Longs l2) {
+        Longs.Builder builder = Longs.builder();
+        l1.forEach(builder::add);
+        l2.forEach(builder::add);
+        return builder.build();
+    }
+
     public boolean contains(long key) {
         for (long l: this) {
             if (l == key) {
