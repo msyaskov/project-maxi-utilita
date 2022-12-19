@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "it.maxi.project.utilita"
-version = "alpha"
+version = "0.0.001-alpha"
 
 repositories {
     mavenCentral()
