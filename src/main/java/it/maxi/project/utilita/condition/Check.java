@@ -1,8 +1,5 @@
 package it.maxi.project.utilita.condition;
 
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.objects.Update;
-
 import java.util.Comparator;
 
 public class Check {
