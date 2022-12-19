@@ -1,5 +1,6 @@
 package it.maxi.project.utilita.condition;
 
+import com.google.common.base.Preconditions;
 import com.google.common.util.concurrent.AtomicDouble;
 
 import java.util.Comparator;
@@ -7,8 +8,7 @@ import java.util.Comparator;
 public class Check {
 
     public static <T> T notNull(T t) {
-        com.google.common.util.concurrent.AtomicDouble atomicDouble = new AtomicDouble();
-        return notNull(t, null);
+        return Preconditions.checkNotNull(t);
     }
 
     public static <T> T notNull(T t, String message) {
