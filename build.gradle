@@ -10,7 +10,5 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.telegram/telegrambots
-    implementation("org.telegram:telegrambots:6.3.0")
 
 }
