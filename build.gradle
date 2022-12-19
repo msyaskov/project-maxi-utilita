@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = "it.project.maxi.utilita"
+version = "0.0.0.1"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
