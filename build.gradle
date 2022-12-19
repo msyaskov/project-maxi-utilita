@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = "it.project.maxi.utilita"
+group = "it.maxi.project.utilita"
 version = "0.0.0.1"
 
 repositories {
